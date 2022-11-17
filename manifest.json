@@ -1,12 +1,8 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "Vrau",
-    "description": "Faz downloads dos arquivos do 'Tarefas'.",
-    "version": "2.2",
-    "browser_action": {
-        "default_icon": "images/vrau.png",
-        "default_title": "Vrau"
-    },
+    "description": "Cria um botão para download dos arquivos do 'Tarefas' (Funpar).",
+    "version": "2.3",
     "content_scripts": [{
         "matches": ["http://200.17.198.2:8089/Tarefa*"],
         "js": [
@@ -15,7 +11,7 @@
         ]
     }],
     "background":{
-        "scripts":["scripts/background.js"]
+        "service_worker":"scripts/background.js"
     },
     "icons": {
         "16": "images/vrau16.png",
@@ -26,6 +22,5 @@
         "activeTab",
         "tabs",
         "downloads"
-    ],
-    "content_security_policy": "script-src 'self' https://www.gstatic.com/; object-src 'self'"
+    ]
 }

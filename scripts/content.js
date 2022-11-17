@@ -5,9 +5,9 @@ $("tr:visible").each(function (index) {
     protocolo = $(this).find('td:nth-child(2)').html();
     projeto = parseInt($('#AF8_PROJET').val().trim());
 
-    $(this).find('td:nth-child(6)').html(
+    $(this).find('td:nth-child(5)').html(
         "<button class='btnArquivos btn btn-primary btn-xs' arquivos='" + id + "' protocolo='"+protocolo+"' projeto='"+projeto+"'>Baixar todos</button><br><span id='" + id + "'>"
-        + $(this).find('td:nth-child(6)').html()
+        + $(this).find('td:nth-child(5)').html()
         + "</span>"
     );
 });
@@ -17,7 +17,6 @@ $('.btnArquivos').on('click', function () {
     protocolo = $(this).attr('protocolo');
     projeto = $(this).attr('projeto');
     arquivosParaDownload = [];
-
     $('#'+id).find("a").each(function (index) {
         indice = index + 1;
         arquivo = $(this).attr('href');
