@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Vrau",
     "description": "Cria um botão para download dos arquivos do 'Tarefas' (Funpar).",
-    "version": "2.4",
+    "version": "2.5",
     "content_scripts": [{
         "matches": ["http://200.17.198.2:8089/Tarefa*"],
         "js": [
